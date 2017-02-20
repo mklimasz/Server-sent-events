@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Trending twitter hashtags</title>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript" src="{{ url_for('static', filename='main.js') }}"></script>
+</head>
+<body>
+    <div id="chart_div"></div>
+    <div style="margin-left: 2%">
+        <label for="hashtag_search">Find programming hashtag</label><br/>
+        <input id="hashtag_search" type="text"/>
+        <button onclick="getHashtag(document.getElementById('hashtag_search'))">Check</button>
+        <div id="hashtag_search_result"></div>
+    </div>
+</body>
+</html>

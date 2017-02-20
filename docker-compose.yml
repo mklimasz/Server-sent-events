@@ -1,0 +1,17 @@
+version: '2'
+services:
+  redis:
+    container_name: redis
+    image: redis:3.2.8-alpine
+    ports:
+      - "6379:6379"
+  flask:
+    container_name: flask
+    build: .
+    ports:
+      - "5000:5000"
+    volumes:
+      - .:/app
+    environment:
+      - debug=true
+      - PYTHONUNBUFFERED=0
