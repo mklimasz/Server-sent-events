@@ -31,7 +31,7 @@ function getHashtag(name) {
     }
     var httpRequest = new XMLHttpRequest();
     httpRequest.onreadystatechange = function() {
-        if (httpRequest.readyState == 4 && httpRequest.status == 200) {
+        if (httpRequest.readyState === 4 && httpRequest.status === 200) {
             var tweet = JSON.parse(httpRequest.responseText);
             var hashtagNode = document.getElementById('hashtag_search_result');
             while (hashtagNode.firstChild) {
